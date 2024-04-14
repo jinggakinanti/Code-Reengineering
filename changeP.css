@@ -112,6 +112,7 @@ button {
 .point button {
     font-size: 20px;
     height: 55px;
+    color: rgb(0, 0, 0);
 }
 
 /* === DIVERGENT CHANGE === */

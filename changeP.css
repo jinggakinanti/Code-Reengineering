@@ -1,0 +1,561 @@
+@font-face {
+    font-family: 'Tiro';
+    src: url(font/TiroBangla-Regular.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Tiro';
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    background-color: rgb(116, 148, 143);
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+header .hamburger-menu {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+header .navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+header .navbar ul li a {
+    text-decoration: none;
+    margin: 10px;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 17px;
+    height: 100%;
+    display: block;
+}
+
+header .navbar ul .list {
+    height: 25px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+}
+
+header .navbar ul li a:hover {
+    transition: 0.2s;
+    background-color: rgb(196, 178, 193);
+    border-radius: 10px;
+}
+
+header .navbar ul li a.active {
+    background-color: rgb(196, 178, 193);
+    border-radius: 10px;
+}
+
+header .matkul {
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+button {
+    border: none;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: rgb(196, 178, 193);
+    font-family: 'Tiro';
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title h1 {
+    margin-right: 100px;
+    font-size: 35px;
+}
+
+.penjelasan-title {
+    background-color: rgb(116, 148, 143);
+    font-size: 25px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.point {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.point button {
+    font-size: 20px;
+    height: 55px;
+}
+
+/* === DIVERGENT CHANGE === */
+
+.divergent-change h2 {
+    margin-top: 10px;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.penjelasan-divergent-change {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.penjelasan-divergent-change img {
+    width: 250px;
+    margin-left: -30px;
+}
+
+.penjelasan-divergent-change .vertical-line {
+    border-left: 5px solid rgb(196, 178, 193);
+}
+
+.penjelasan-divergent-change .penjelasan {
+    padding-left: 10px;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.gambar-divergent-change {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gambar-divergent-change div {
+    display: flex;
+    flex-direction: row;
+    color: rgb(116, 148, 143);
+}
+
+.gambar-divergent-change div p {
+    padding-right: 10px;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.gambar-divergent-change img {
+    width: 520px;
+    border-radius: 4%;
+}
+
+.penjelasan-gambar p {
+    margin-top: 30px;
+    font-size: 17px;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+/* === SHOTGUN SURGERY === */
+
+.shotgun-surgery h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.penjelasan-shotgun-surgery {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.penjelasan-shotgun-surgery img {
+    width: 250px;
+    margin-right: 15px;
+}
+
+.penjelasan-shotgun-surgery .vertical-line {
+    border-left: 5px solid rgb(196, 178, 193);
+}
+
+.penjelasan-shotgun-surgery .penjelasan {
+    padding-left: 10px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.gambar-shotgun-surgery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gambar-shotgun-surgery div {
+    display: flex;
+    flex-direction: row;
+    color: rgb(116, 148, 143);
+}
+
+.gambar-shotgun-surgery div p {
+    padding-right: 10px;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.gambar-shotgun-surgery img {
+    width: 520px;
+    border-radius: 4%;
+}
+
+/* === PARALLEL INHERITANCE HIERARCHY === */
+
+.parallel-inheritance-hierarchy h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.penjelasan-parallel-inheritance-hierarchy {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.penjelasan-parallel-inheritance-hierarchy img {
+    width: 200px;
+    margin-right: 15px;
+}
+
+.penjelasan-parallel-inheritance-hierarchy .vertical-line {
+    border-left: 5px solid rgb(196, 178, 193);
+}
+
+.penjelasan-parallel-inheritance-hierarchy .penjelasan {
+    padding-left: 10px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.gambar-parallel-inheritance-hierarchy {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gambar-parallel-inheritance-hierarchy div {
+    display: flex;
+    flex-direction: row;
+    color: rgb(116, 148, 143);
+}
+
+.gambar-parallel-inheritance-hierarchy div p {
+    padding-right: 10px;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.gambar-parallel-inheritance-hierarchy img {
+    width: 520px;
+    border-radius: 4%;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(116, 148, 143);
+    padding: 10px 0px;
+}
+
+.about-us {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sosial-media {
+    text-align: start;
+    margin-right: 30px;
+}
+
+.references {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.references a {
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+.references h4 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.references a:hover {
+    color: white;
+    font-size: 19px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    margin: 5px;
+}
+
+.logo a:hover {
+    color: black;
+}
+
+@media only screen and (max-width: 650px) {
+
+    header .hamburger-menu {
+        margin: 10px;
+        display: block;
+        z-index: 999;
+    }
+
+    #nav_check:checked~.navbar {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        display: none;
+        right: 0;
+        top: 0;
+        z-index: 998;
+        width: 250px;
+        height: 100vh;
+        background-color: rgb(116, 148, 143);
+
+    }
+
+    header .navbar ul li a {
+        border-radius: 10px;
+        font-size: 13px;
+        height: 100%;
+        display: block;
+    }
+
+    header .navbar ul .list {
+        display: block;
+        margin-bottom: 30px;
+        height: 25px;
+        line-height: 25px;
+    }
+
+    header .navbar ul {
+        display: block;
+        padding: 0 20px;
+        margin-top: 80px;
+    }
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .title {
+        display: block;
+    }
+
+    .title h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-top: -30px;
+    }
+
+    .penjelasan-title {
+        font-size: 12px;
+    }
+
+    .point {
+        justify-content: center;
+    }
+
+    .point button {
+        margin-top: -8px;
+        font-size: 10px;
+        height: 100%;
+    }
+
+    .divergent-change h2 {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .penjelasan-divergent-change {
+        display: block;
+    }
+
+    .penjelasan-divergent-change .vertical-line {
+        display: none;
+    }
+
+    .penjelasan-divergent-change img {
+        width: 250px;
+    }
+
+    .penjelasan-divergent-change .penjelasan {
+        font-size: 12px;
+        margin-bottom: -30px;
+    }
+
+    .gambar-divergent-change {
+        display: block;
+    }
+
+    .gambar-divergent-change div {
+        display: block;
+    }
+
+    .gambar-divergent-change div img {
+        width: 100%;
+    }
+
+    .gambar-divergent-change div p {
+        font-size: 14px;
+    }
+    
+    .divergent-change .penjelasan-gambar p {
+        margin-top: 0;
+        font-size: 13px;
+    }
+
+    .shotgun-surgery h2 {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .penjelasan-shotgun-surgery {
+        display: block;
+    }
+
+    .penjelasan-shotgun-surgery .vertical-line {
+        display: none;
+    }
+
+    .penjelasan-shotgun-surgery img {
+        width: 250px;
+    }
+
+    .penjelasan-shotgun-surgery .penjelasan {
+        font-size: 12px;
+        margin-bottom: -30px;
+    }
+
+    .gambar-shotgun-surgery {
+        display: block;
+    }
+
+    .gambar-shotgun-surgery div {
+        display: block;
+    }
+
+    .gambar-shotgun-surgery div img {
+        width: 100%;
+    }
+
+    .gambar-shotgun-surgery div p {
+        font-size: 14px;
+    }
+    
+    .shotgun-surgery .penjelasan-gambar p {
+        margin-top: 0;
+        font-size: 12px;
+    }
+
+    .parallel-inheritance-hierarchy h2 {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .penjelasan-parallel-inheritance-hierarchy {
+        display: block;
+    }
+
+    .penjelasan-parallel-inheritance-hierarchy .vertical-line {
+        display: none;
+    }
+
+    .penjelasan-parallel-inheritance-hierarchy img {
+        width: 250px;
+    }
+
+    .penjelasan-parallel-inheritance-hierarchy .penjelasan {
+        font-size: 12px;
+        margin-bottom: -30px;
+    }
+
+    .gambar-parallel-inheritance-hierarchy {
+        display: block;
+    }
+
+    .gambar-parallel-inheritance-hierarchy div {
+        display: block;
+    }
+
+    .gambar-parallel-inheritance-hierarchy div img {
+        width: 100%;
+    }
+
+    .gambar-parallel-inheritance-hierarchy div p {
+        font-size: 14px;
+    }
+    
+    .parallel-inheritance-hierarchy .penjelasan-gambar p {
+        margin-top: 0;
+        font-size: 12px;
+    }
+
+    footer h1 {
+        font-size: 20px;
+    }
+
+    .references {
+        margin-left: 10px;
+    }
+
+    .references h4 {
+        font-size: 15px;
+    }
+
+    .references a {
+        font-size: 10px;
+    }
+
+    .references a:hover {
+        font-size: 11px;
+    }
+
+    .sosial-media {
+        text-align: end;
+        margin-top: 5px;
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    .logo a {
+        font-size: 13px;
+    }
+
+    footer span {
+        font-size: 10px;
+    }
+}

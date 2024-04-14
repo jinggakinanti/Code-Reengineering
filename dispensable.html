@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <href></href>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="dispensable.css">
+    <title>The Dispensable</title>
+</head>
+
+<body>
+    <header>
+        <div class="matkul">
+            <p>
+                Bad Code Smell<br>Code Reengineering
+            </p>
+        </div>
+
+        <input type="checkbox" id="nav_check" hidden>
+
+        <nav class="navbar">
+            <ul>
+                <li class="list"><a href="changeP.html">The Change Preventer</a></li>
+                <li class="list"><a href="dispensable.html" class="active">The Dispensable</a></li>
+            </ul>
+        </nav>
+
+        <label for="nav_check" class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+    </header>
+
+    <div class="container">
+        <div class="top">
+            <div class="title">
+                <div>
+                    <h1>
+                        The Dispensable
+                    </h1>
+                </div>
+
+                <div class="penjelasan-title">
+                    <p>
+                        Smell ini berarti sesuatu yang tidak berguna dan tidak 
+                        diperlukan. Jika bagian ini tidak ada akan membuat code 
+                        lebih jelas, efisien, dan mudah dimengerti
+                    </p>
+                </div>
+            </div>
+
+            <div class="point">
+                <a href="#comments">
+                    <button>Comments</button>
+                </a>
+
+                <a href="#duplicate-code">
+                    <button>Duplicate Code</button>
+                </a>
+
+                <a href="#lazy-class">
+                    <button>Lazy Class</button>
+                </a>
+
+                <a href="#data-class">
+                    <button>Data Class</button>
+                </a>
+
+                <a href="#dead-code">
+                    <button>Dead Code</button>
+                </a>
+
+                <a href="#speculative-generality">
+                    <button>Speculative Generality</button>
+                </a>
+            </div>
+        </div>
+
+
+        <section id="comments">
+            <div class="comments">
+                <h2>Comments</h2>
+
+                <div class="penjelasan-comments">
+                    <img src="image/comment.png">
+
+                    <div class="vertical-line"></div>
+
+                    <p class="penjelasan">
+                        Comments terjadi ketika pada sebuah code terdapat banyak comment untuk penjelasan. 
+                        Sebuah code yang bagus harus memiliki nama yang self-explain dan flow yang jelas 
+                        sehingga tidak memerlukan adanya comment. Jika sebuah code masih memerlukan comment 
+                        untuk menjelaskannya, maka code tersebut mungkin perlu diperbaiki agar dapat memiliki 
+                        nama atau flow yang lebih jelas. Comments dapat ditangani dengan menghapus comment tersebut 
+                        jika code sudah jelas, jika comment digunakan untuk menjelaskan sebuah bagian dari code maka 
+                        dapat dilakukan extract method pada bagian tersebut dan nama dari method dapat diambil dari 
+                        comment itu sendiri, tetapi jika method tersebut telah di-extract dan masih diperlukan comment 
+                        untuk menjelaskan flow, maka dapat dilakukan rename method untuk mendapatkan self-explain nama.
+                    </p>
+                </div>
+
+                <div class="gambar-comments">
+                    <div>
+                        <p>Before</p>
+                        <img src="image/comment1.png">
+                    </div>
+
+                    <div>
+                        <p>After</p>
+                        <img src="image/comment2.png">
+                    </div>
+                </div>
+
+                <div class="penjelasan-gambar">
+                    <p>
+                        Pada contoh code di atas, sebelumnya terdapat comment untuk menjelaskan fungsi dari method yaitu 
+                        menghitung luas persegi panjang dan memberi output hasilnya, dimana nama dan alur dari kedua method 
+                        tersebut sebenarnya sudah jelas.<br><br>
+                        Kemudian dilakukannya refactoring, yaitu dengan menghapus comment yang tidak diperlukan karena code 
+                        tersebut sudah jelas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="duplicate-code">
+            <div class="duplicate-code">
+                <h2>Duplicate Code</h2>
+
+                <div class="penjelasan-duplicate-code">
+                    <img src="image/duplicate.png">
+
+                    <div class="vertical-line"></div>
+
+                    <p class="penjelasan">
+                        Duplicate Code terjadi ketika terdapat dua atau lebih bagian code yang identik atau mirip. Hal tersebut dapat 
+                        terjadi karena seringnya dilakukan copy paste dalam membuat code atau terdapat dua programmer yang mengerjakan 
+                        code tersebut. Hal ini dapat menyebabkan kerumitan dalam mengelola code kedepannya. Duplicate Code dapat ditangani 
+                        dengan extract method apabila class berada dua subclass pada level yang sama atau extract superclass jika code 
+                        terdapat di dua class berbeda. 
+                    </p>
+                </div>
+
+                <div class="gambar-duplicate-code">
+                    <div>
+                        <p class="before">Before</p>
+                        <img src="image/duplicate1.png">
+                    </div>
+
+                    <div>
+                        <p>After</p>
+                        <img src="image/duplicate2.png">
+                    </div>
+                </div>
+
+                <div class="penjelasan-gambar">
+                    <p>
+                        Pada contoh code di atas, sebelumnya terdapat dua class yaitu Employee1 dan Employee2 yang memiliki 
+                        data dan fungsi yang sama yaitu menghitung bonus yang didapatkan employee, satu-satunya hal yang membedakan 
+                        kedua class tersebut ialah persentase bonus yang didapatkan.<br><br>
+                        Kemudian dilakukannya refactoring, yaitu dengan menyatukan class menjadi Employee dan menambahkan variable 
+                        percentage agar masing-masing employee dapat memiliki persentase bonus yang berbeda-beda.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="lazy-class">
+            <div class="lazy-class">
+                <h2>Lazy Class</h2>
+
+                <div class="penjelasan-lazy-class">
+                    <img src="image/lazy.png">
+
+                    <div class="vertical-line"></div>
+
+                    <p class="penjelasan">
+                        Lazy Class terjadi ketika terdapat class yang memiliki sedikit atau bahkan tidak ada fitur/metode yang diimplementasikan. 
+                        Hal ini dapat terjadi setelah dilakukannya refactoring agar fitur-fitur code terbagi, tetapi malah menghasilkan class yang 
+                        memiliki fungsi minim. Lazy class dapat ditangani dengan menambahkan metode yang berkaitan ke dalam class tersebut atau 
+                        menyatukannya dengan class lain.
+                    </p>
+                </div>
+
+                <div class="gambar-lazy-class">
+                    <div>
+                        <p>Before</p>
+                        <img src="image/lazy1.png">
+                    </div>
+
+                    <div>
+                        <p>After</p>
+                        <img src="image/lazy2.png">
+                    </div>
+                </div>
+
+                <div class="penjelasan-gambar">
+                    <p>
+                        Pada contoh code di atas, sebelumnya terdapat tiga class Lazy Class, yaitu class Square yang hanya bertugas set dan get data 
+                        variable side, class AreaSquare dan PerimeterSquare yang masing-masing hanya memiliki satu fitur.<br><br>
+                        Kemudian dilakukannya refactoring, yaitu dengan menggabungkan fitur-fitur dari tiga class tersebut di class Square sehingga 
+                        lebih efektif.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="data-class">
+            <div class="data-class">
+                <h2>Data Class</h2>
+
+                <div class="penjelasan-data-class">
+                    <img src="image/data.png">
+
+                    <div class="vertical-line"></div>
+
+                    <p class="penjelasan">
+                        Data Class terjadi ketika terdapat sebuah class yang hanya terdiri dari data serta constructor, setter, dan getter untuk data tersebut. 
+                        Jadi, class ini berisi data yang akan dipakai atau diakses oleh class lain, tidak mengandung fitur atau fungsionalitas lain. Smell 
+                        ini sering terjadi pada awal proses pembuatan class, tetapi seiring dengan berkembangnya sebuah class haruslah memiliki fungsionalitas. 
+                        Data Class dapat ditangani dengan melakukan review pada class-class lain yang menggunakan data dari Data Class dan mencari method yang 
+                        dapat dipindahkan ke Data Class.
+                    </p>
+                </div>
+
+                <div class="gambar-data-class">
+                    <div>
+                        <p>Before</p>
+                        <img src="image/data1.png">
+                    </div>
+
+                    <div>
+                        <p>After</p>
+                        <img src="image/data2.png">
+                    </div>
+                </div>
+
+                <div class="penjelasan-gambar">
+                    <p>
+                        Pada contoh code di atas, sebelumnya class Employee merupakan Data Class karena hanya berisi data dari seorang employee serta constructor, 
+                        setter, dan getter.<br><br>
+                        Kemudian dilakukannya refactoring, yaitu dengan menambahkan method yang berhubungan dengan data-data yang ada, yaitu method untuk validasi 
+                        checkingAge() dan checkingEmail() sehingga sekarang class Employee tidak hanya berisi data.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="dead-code">
+            <div class="dead-code">
+                <h2>Dead Code</h2>
+
+                <div class="penjelasan-dead-code">
+                    <img src="image/dead.png">
+
+                    <div class="vertical-line"></div>
+
+                    <p class="penjelasan">
+                        Dead Code terjadi ketika terdapat variable, parameter, field, method, atau class yang tidak dipakai lagi atau tidak tersentuh ketika code dijalankan. 
+                        Hal ini sering terjadi seiring berkembangnya code, terdapat bagian code yang tidak lagi digunakan dan tidak dihapus sehingga membuat code tidak relevan. 
+                        Dead Code dapat ditangani dengan menghapus code yang sudah tidak digunakan lagi atau jika bagian tersebut dibutuhkan maka melakukan implementasi agar saat 
+                        code dijalankan bagian tersebut akan berfungsi.
+                    </p>
+                </div>
+
+                <div class="gambar-dead-code">
+                    <div>
+                        <p>Before</p>
+                        <img src="image/dead1.png">
+                    </div>
+
+                    <div>
+                        <p>After</p>
+                        <img src="image/dead2.png">
+                    </div>
+                </div>
+
+                <div class="penjelasan-gambar">
+                    <p>
+                        Pada contoh code di atas, sebelumnya bagian if else tidak akan tersentuh ketika code dijalankan karena code akan return sebelum sampai bagian if else, sehingga hanya 
+                        akan menghasilkan jumlah dari penambahan angka.<br><br>
+                        Kemudian dilakukannya refactoring, yaitu dengan menghilangkan return dan mengganti jenis method menjadi void, sehingga ketika code dijalankan akan menghasilkan output 
+                        hasil dari penjumlahan serta apakah hasil tersebut merupakan bilangan positif atau negatif.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="speculative-generality">
+            <div class="speculative-generality">
+                <h2>Speculative Generality</h2>
+
+                <div class="penjelasan-speculative-generality">
+                    <img src="image/speculative.png">
+
+                    <div class="vertical-line"></div>
+
+                    <p class="penjelasan">
+                        Speculative Generality terjadi ketika terdapat variable, parameter, field, method, atau class yang dibuat bertujuan untuk persiapan jika akan dibutuhkan di masa depan. 
+                        Hal ini terjadi karena programmer berspekulasi bahwa bagian tersebut akan digunakan tetapi ternyata saat code dijalankan setelah beberapa lama, bagian tersebut tidak dibutuhkan. 
+                        Speculative Generality dapat ditangani dengan mengahpus variable, parameter, field, method, atau class yang memang tidak diperlukan.
+                    </p>
+                </div>
+
+                <div class="gambar-speculative-generality">
+                    <div>
+                        <p>Before</p>
+                        <img src="image/speculative1.png">
+                    </div>
+
+                    <div>
+                        <p>After</p>
+                        <img src="image/speculative2.png">
+                    </div>
+                </div>
+
+                <div class="penjelasan-gambar">
+                    <p>
+                        Pada contoh code di atas, sebelumnya programmer berspekulasi bahwa akan ada premium user, tetapi pada akhirnya interface PremiumUser tidak digunakan.<br><br>
+                        Kemudian dilakukannya refactoring, yaitu dengan menghilangkan interface PremiumUser karena hanya ada satu jenis user yang akan digunakan.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <h1>About Us</h1>
+        <div class="about-us">
+            <div class="references">
+                <h4>References</h4>
+                <a href="https://refactoring.guru/refactoring/smells" target="_blank">Refactoring Guru</a>
+                <a href="https://sourcemaking.com/refactoring/smells" target="_blank">Source Making</a>
+            </div>
+
+            <div class="sosial-media">
+                <div class="chr">
+                    <p>Christoper Chendra</p>
+                    <div class="logo">
+                        <a href="https://www.linkedin.com/in/christoper-chendra/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/ChristoperChend" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+    
+                <div class="oren">
+                    <p>Dwi Jingga Khaerakinanti</p>
+                    <div class="logo">
+                        <a href="https://www.linkedin.com/in/dwi-jingga-khaerakinanti/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/jinggakinanti" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <span>&copy;2024 Christoper Chendra & Dwi Jingga Khaerakinanti</span>
+        </div>
+        
+    </footer>
+
+</body>
+
+</html>

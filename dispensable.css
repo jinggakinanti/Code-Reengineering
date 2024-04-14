@@ -1,0 +1,853 @@
+@font-face {
+    font-family: 'Tiro';
+    src: url(font/TiroBangla-Regular.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Tiro';
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    background-color: rgb(116, 148, 143);
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+header .hamburger-menu {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+header .navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+header .navbar ul li a {
+    text-decoration: none;
+    margin: 10px;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 17px;
+    height: 100%;
+    display: block;
+}
+
+header .navbar ul .list {
+    height: 25px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+}
+
+header .navbar ul li a:hover {
+    transition: 0.2s;
+    background-color: rgb(196, 178, 193);
+    border-radius: 10px;
+}
+
+header .navbar ul li a.active {
+    background-color: rgb(196, 178, 193);
+    border-radius: 10px;
+}
+
+header .matkul {
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.point a {
+    height: 100%;
+}
+
+button {
+    border: none;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: rgb(196, 178, 193);
+    font-family: 'Tiro';
+    font-size: 15px;
+    height: 60px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title h1 {
+    margin-right: 100px;
+    font-size: 35px;
+}
+
+.penjelasan-title {
+    background-color: rgb(116, 148, 143);
+    font-size: 25px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.point {
+    display: flex;
+    justify-content: space-around;
+}
+
+.point button {
+    font-size: 20px;
+    padding: 10px 20px 10px;
+}
+
+/* === COMMENTS === */
+
+.comments h2 {
+    margin-top: 10px;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.penjelasan-comments {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.penjelasan-comments img {
+    width: 300px;
+    margin-left: -30px;
+}
+
+.penjelasan-comments .vertical-line {
+    border-left: 5px solid rgb(196, 178, 193);
+}
+
+.penjelasan-comments .penjelasan {
+    padding-left: 10px;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.gambar-comments {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gambar-comments div {
+    display: flex;
+    flex-direction: row;
+    color: rgb(116, 148, 143);
+}
+
+.gambar-comments div p {
+    padding-right: 10px;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.gambar-comments img {
+    width: 520px;
+    border-radius: 4%;
+}
+
+.penjelasan-gambar p {
+    margin-top: 30px;
+    font-size: 17px;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+/* === DUPLICATE CODE === */
+
+.duplicate-code h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.penjelasan-duplicate-code {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.penjelasan-duplicate-code img {
+    width: 200px;
+    margin-right: 15px;
+}
+
+.penjelasan-duplicate-code .vertical-line {
+    border-left: 5px solid rgb(196, 178, 193);
+}
+
+.penjelasan-duplicate-code .penjelasan {
+    padding-left: 10px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.gambar-duplicate-code {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gambar-duplicate-code div {
+    display: flex;
+    flex-direction: row;
+    color: rgb(116, 148, 143);
+}
+
+.gambar-duplicate-code div p {
+    padding-right: 10px;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.gambar-duplicate-code img {
+    width: 520px;
+    border-radius: 4%;
+}
+
+/* === LAZY CLASS === */
+
+.lazy-class h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.penjelasan-lazy-class {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.penjelasan-lazy-class img {
+    width: 200px;
+    margin-right: 15px;
+}
+
+.penjelasan-lazy-class .vertical-line {
+    border-left: 5px solid rgb(196, 178, 193);
+}
+
+.penjelasan-lazy-class .penjelasan {
+    padding-left: 10px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.gambar-lazy-class {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gambar-lazy-class div {
+    display: flex;
+    flex-direction: row;
+    color: rgb(116, 148, 143);
+}
+
+.gambar-lazy-class div p {
+    padding-right: 10px;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.gambar-lazy-class img {
+    width: 520px;
+    border-radius: 4%;
+}
+
+/* === DATA CLASS === */
+
+.data-class h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.penjelasan-data-class {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.penjelasan-data-class img {
+    width: 250px;
+    margin-right: 15px;
+}
+
+.penjelasan-data-class .vertical-line {
+    border-left: 5px solid rgb(196, 178, 193);
+}
+
+.penjelasan-data-class .penjelasan {
+    padding-left: 10px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.gambar-data-class {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gambar-data-class div {
+    display: flex;
+    flex-direction: row;
+    color: rgb(116, 148, 143);
+}
+
+.gambar-data-class div p {
+    padding-right: 10px;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.gambar-data-class img {
+    width: 520px;
+    border-radius: 4%;
+}
+
+/* === DEAD CODE === */
+
+.dead-code h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.penjelasan-dead-code {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.penjelasan-dead-code img {
+    width: 200px;
+    margin-right: 15px;
+}
+
+.penjelasan-dead-code .vertical-line {
+    border-left: 5px solid rgb(196, 178, 193);
+}
+
+.penjelasan-dead-code .penjelasan {
+    padding-left: 10px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.gambar-dead-code {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gambar-dead-code div {
+    display: flex;
+    flex-direction: row;
+    color: rgb(116, 148, 143);
+}
+
+.gambar-dead-code div p {
+    padding-right: 10px;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.gambar-dead-code img {
+    width: 520px;
+    border-radius: 4%;
+}
+
+/* === SPECULATIVE GENERALITY === */
+
+.speculative-generality h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.penjelasan-speculative-generality {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.penjelasan-speculative-generality img {
+    width: 200px;
+    margin-right: 15px;
+}
+
+.penjelasan-speculative-generality .vertical-line {
+    border-left: 5px solid rgb(196, 178, 193);
+}
+
+.penjelasan-speculative-generality .penjelasan {
+    padding-left: 10px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.gambar-speculative-generality {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gambar-speculative-generality div {
+    display: flex;
+    flex-direction: row;
+    color: rgb(116, 148, 143);
+}
+
+.gambar-speculative-generality div p {
+    padding-right: 10px;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.gambar-speculative-generality img {
+    width: 520px;
+    border-radius: 4%;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(116, 148, 143);
+    padding: 10px 0px;
+}
+
+.about-us {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sosial-media {
+    text-align: start;
+    margin-right: 30px;
+}
+
+.references {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.references a {
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+.references h4 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.references a:hover {
+    color: white;
+    font-size: 19px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    margin: 5px;
+}
+
+.logo a:hover {
+    color: black;
+}
+
+@media only screen and (max-width: 650px) {
+
+    header .hamburger-menu {
+        margin: 10px;
+        display: block;
+        z-index: 999;
+    }
+
+    #nav_check:checked~.navbar {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        display: none;
+        right: 0;
+        top: 0;
+        z-index: 998;
+        width: 250px;
+        height: 100vh;
+        background-color: rgb(116, 148, 143);
+
+    }
+
+    header .navbar ul li a {
+        border-radius: 10px;
+        font-size: 13px;
+        height: 100%;
+        display: block;
+    }
+
+    header .navbar ul .list {
+        display: block;
+        margin-bottom: 30px;
+        height: 25px;
+        line-height: 25px;
+    }
+
+    header .navbar ul {
+        display: block;
+        padding: 0 20px;
+        margin-top: 80px;
+    }
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .title {
+        display: block;
+    }
+
+    .title h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-top: -30px;
+    }
+
+    .penjelasan-title {
+        font-size: 12px;
+    }
+
+    .point {
+        justify-content: center;
+        display: block;
+    }
+
+    .point a {
+        text-decoration: none;
+    }
+    
+    .point button {
+        margin-top: -8px;
+        font-size: 10px;
+        height: 100%;
+    }
+
+    .comments h2 {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .penjelasan-comments {
+        display: block;
+    }
+
+    .penjelasan-comments .vertical-line {
+        display: none;
+    }
+
+    .penjelasan-comments img {
+        width: 250px;
+        margin-left: 10px;
+    }
+
+    .penjelasan-comments .penjelasan {
+        font-size: 12px;
+        margin-bottom: -30px;
+    }
+
+    .gambar-comments {
+        display: block;
+    }
+
+    .gambar-comments div {
+        display: block;
+    }
+
+    .gambar-comments div img {
+        width: 100%;
+    }
+
+    .gambar-comments div p {
+        font-size: 14px;
+    }
+    
+    .comments .penjelasan-gambar p {
+        margin-top: 0;
+        font-size: 13px;
+    }
+
+    .duplicate-code h2 {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .penjelasan-duplicate-code {
+        display: block;
+    }
+
+    .penjelasan-duplicate-code .vertical-line {
+        display: none;
+    }
+
+    .penjelasan-duplicate-code img {
+        width: 250px;
+        margin-left: 10px;
+    }
+
+    .penjelasan-duplicate-code .penjelasan {
+        font-size: 12px;
+        margin-bottom: -30px;
+    }
+
+    .gambar-duplicate-code {
+        display: block;
+    }
+
+    .gambar-duplicate-code div {
+        display: block;
+    }
+
+    .gambar-duplicate-code div img {
+        width: 100%;
+    }
+
+    .gambar-duplicate-code div p {
+        font-size: 14px;
+    }
+    
+    .duplicate-code .penjelasan-gambar p {
+        margin-top: 0;
+        font-size: 13px;
+    }
+
+    .lazy-class h2 {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .penjelasan-lazy-class {
+        display: block;
+    }
+
+    .penjelasan-lazy-class .vertical-line {
+        display: none;
+    }
+
+    .penjelasan-lazy-class img {
+        width: 250px;
+        margin-left: 10px;
+    }
+
+    .penjelasan-lazy-class .penjelasan {
+        font-size: 12px;
+        margin-bottom: -30px;
+    }
+
+    .gambar-lazy-class {
+        display: block;
+    }
+
+    .gambar-lazy-class div {
+        display: block;
+    }
+
+    .gambar-lazy-class div img {
+        width: 100%;
+    }
+
+    .gambar-lazy-class div p {
+        font-size: 14px;
+    }
+    
+    .lazy-class .penjelasan-gambar p {
+        margin-top: 0;
+        font-size: 13px;
+    }
+
+    .data-class h2 {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .penjelasan-data-class {
+        display: block;
+    }
+
+    .penjelasan-data-class .vertical-line {
+        display: none;
+    }
+
+    .penjelasan-data-class img {
+        width: 250px;
+        margin-left: 10px;
+    }
+
+    .penjelasan-data-class .penjelasan {
+        font-size: 12px;
+        margin-bottom: -30px;
+    }
+
+    .gambar-data-class {
+        display: block;
+    }
+
+    .gambar-data-class div {
+        display: block;
+    }
+
+    .gambar-data-class div img {
+        width: 100%;
+    }
+
+    .gambar-data-class div p {
+        font-size: 14px;
+    }
+    
+    .data-class .penjelasan-gambar p {
+        margin-top: 0;
+        font-size: 13px;
+    }
+
+    .dead-code h2 {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .penjelasan-dead-code {
+        display: block;
+    }
+
+    .penjelasan-dead-code .vertical-line {
+        display: none;
+    }
+
+    .penjelasan-dead-code img {
+        width: 250px;
+        margin-left: 10px;
+    }
+
+    .penjelasan-dead-code .penjelasan {
+        font-size: 12px;
+        margin-bottom: -30px;
+    }
+
+    .gambar-dead-code {
+        display: block;
+    }
+
+    .gambar-dead-code div {
+        display: block;
+    }
+
+    .gambar-dead-code div img {
+        width: 100%;
+    }
+
+    .gambar-dead-code div p {
+        font-size: 14px;
+    }
+    
+    .dead-code .penjelasan-gambar p {
+        margin-top: 0;
+        font-size: 13px;
+    }
+
+    .speculative-generality h2 {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .penjelasan-speculative-generality {
+        display: block;
+    }
+
+    .penjelasan-speculative-generality .vertical-line {
+        display: none;
+    }
+
+    .penjelasan-speculative-generality img {
+        width: 250px;
+        margin-left: 10px;
+    }
+
+    .penjelasan-speculative-generality .penjelasan {
+        font-size: 12px;
+        margin-bottom: -30px;
+    }
+
+    .gambar-speculative-generality {
+        display: block;
+    }
+
+    .gambar-speculative-generality div {
+        display: block;
+    }
+
+    .gambar-speculative-generality div img {
+        width: 100%;
+    }
+
+    .gambar-speculative-generality div p {
+        font-size: 14px;
+    }
+    
+    .speculative-generality .penjelasan-gambar p {
+        margin-top: 0;
+        font-size: 13px;
+    }
+
+    footer h1 {
+        font-size: 20px;
+    }
+
+    .references {
+        margin-left: 10px;
+    }
+
+    .references h4 {
+        font-size: 15px;
+    }
+
+    .references a {
+        font-size: 10px;
+    }
+
+    .references a:hover {
+        font-size: 11px;
+    }
+
+    .sosial-media {
+        text-align: end;
+        margin-top: 5px;
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    .logo a {
+        font-size: 13px;
+    }
+
+    footer span {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <href></href>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="changeP.css">
+    <title>The Change Preventer</title>
+</head>
+
+<body>
+    <header>
+        <div class="matkul">
+            <p>
+                Bad Code Smell<br>Code Reengineering
+            </p>
+        </div>
+
+        <input type="checkbox" id="nav_check" hidden>
+
+        <nav class="navbar">
+            <ul>
+                <li class="list"><a href="changeP.html" class="active">The Change Preventer</a></li>
+                <li class="list"><a href="dispensable.html">The Dispensable</a></li>
+            </ul>
+        </nav>
+
+        <label for="nav_check" class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+    </header>
+
+    <div class="container">
+        <div class="top">
+            <div class="title">
+                <div>
+                    <h1>
+                        The Change Preventer
+                    </h1>
+                </div>
+
+                <div class="penjelasan-title">
+                    <p>
+                        Smell ini berarti jika seorang programmer melakukan perubahan di satu tempat pada code nya, maka ia akan harus melakukan banyak perubahan di tempat lain juga
+                    </p>
+                </div>
+            </div>
+
+            <div class="point">
+                <a href="#divergent-change">
+                    <button>Divergent Change</button>
+                </a>
+
+                <a href="#shotgun-surgery">
+                    <button>Shotgun Surgery</button>
+                </a>
+
+                <a href="#parallel-inheritance-hierarchy">
+                    <button>Parallel Inheritance Hierarchy</button>
+                </a>
+            </div>
+        </div>
+
+
+        <section id="divergent-change">
+            <div class="divergent-change">
+                <h2>Divergent Change</h2>
+
+                <div class="penjelasan-divergent-change">
+                    <img src="image/divergent.png">
+
+                    <div class="vertical-line"></div>
+
+                    <p class="penjelasan">
+                        Divergent Change terjadi ketika programmer melakukan perubahan pada suatu class
+                        tetapi kemudian ia juga harus melakukan banyak perubahan pada method/class lain
+                        yang sebenarnya tidak berhubungan. Hal ini berarti satu class bertanggung jawab
+                        untuk berbagai jenis fungsi atau responsibilitas dan melanggar Single Responsibility
+                        Principal, dimana setiap terdapat fungsi lain yang diubah atau ditambahkan,
+                        maka class tersebut harus diganti untuk menangani fungsi baru tersebut. Smell
+                        ini dapat menyebabkan error yang muncul setiap dilakukan perubahan pada class
+                        tersebut sehingga akan memakan waktu yang lebih banyak dalam mengerjakannya.
+                        Divergent Change dapat ditangani dengan menerapkan extract class atau extract superclass.
+                    </p>
+                </div>
+
+                <div class="gambar-divergent-change">
+                    <div>
+                        <p>Before</p>
+                        <img src="image/divergent1.png">
+                    </div>
+
+                    <div>
+                        <p>After</p>
+                        <img src="image/divergent2.png">
+                    </div>
+                </div>
+
+                <div class="penjelasan-gambar">
+                    <p>
+                        Pada contoh code di atas, sebelumnya class Employee yang berfungsi untuk menampung informasi
+                        employee,
+                        juga menampung method calculateBonus() dan updateAddress(), yang menyebabkan class Employee
+                        bertanggung jawab
+                        terhadap banyak fungsi, misalnya persenan bonus akan diganti maka akan dilakukan perubahan di
+                        dalam class Employee.<br><br>
+                        Setelah dilakukannya refactoring, yaitu dengan extract class atau membuat class baru sesuai
+                        responsibilitasnya
+                        masing-masing, sehingga jika ada perubahan yang ingin dilakukan maka akan hanya fokus terhadap
+                        class itu sendiri.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="shotgun-surgery">
+            <div class="shotgun-surgery">
+                <h2>Shotgun Surgery</h2>
+
+                <div class="penjelasan-shotgun-surgery">
+                    <img src="image/shotgun.png">
+
+                    <div class="vertical-line"></div>
+
+                    <p class="penjelasan">
+                        Shotgun Surgery terjadi ketika programmer melakukan perubahan pada sebuah bagian code
+                        tetapi kemudian ia juga harus melakukan perubahan-perubahan pada code yang tersebar di
+                        class lain. Satu responsibilitas telah terbagi di banyak bagian yang berbeda dalam code.
+                        Smell ini dapat menyebabkan pengembangan code akan menjadi lebih rumit dan menambah
+                        kemungkinan terjaidnya error jika terdapat banyak class yang harus diganti. Shotgun
+                        Surgery dapat ditangani dengan menerapkan move method atau move field menuju sebuah
+                        existing class atau new class.
+                    </p>
+                </div>
+
+                <div class="gambar-shotgun-surgery">
+                    <div>
+                        <p>Before</p>
+                        <img src="image/shotgun1.png">
+                    </div>
+
+                    <div>
+                        <p>After</p>
+                        <img src="image/shotgun2.png">
+                    </div>
+                </div>
+
+                <div class="penjelasan-gambar">
+                    <p>
+                        Pada contoh code di atas, sebelumnya terdapat dua class, yaitu Customer yang merepresentasikan
+                        pelanggan dan OrderProcessor yang bertanggung jawab untuk memproses pesanan. Method
+                        updateCustomerName()
+                        dan updateCustomerEmail() dalam kelas OrderProcessor memanggil method updateName() dan
+                        updateEmail()
+                        dalam class Customer. Ketika ingin mengubah logika pembaruan nama atau email customer,
+                        programmer harus
+                        melakukan perubahan di dua kelas yang berbeda.<br><br>
+                        Setelah dilakukannya refactoring, yaitu dengan memindahkan fitur updateEmail() dan
+                        updateAddress() ke fitur
+                        baru yaitu updateDetails(), serta updateCustomerName() dan updateCustomerEmail() ke
+                        updateCustomerDetails()
+                        sehingga mengurangi dampak dari Shotgun Surgery.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="parallel-inheritance-hierarchy">
+            <div class="parallel-inheritance-hierarchy">
+                <h2>Parallel Inheritance Hierarchy</h2>
+
+                <div class="penjelasan-parallel-inheritance-hierarchy">
+                    <img src="image/parallel.png">
+
+                    <div class="vertical-line"></div>
+
+                    <p class="penjelasan">
+                        Parallel Inheritance Hierarchy terjadi ketika setiap programmer membuat subclass untuk sebuah
+                        class,
+                        ia akan perlu untuk membuat subclass untuk class lain. Hal ini akan menjadi masalah besar jika
+                        code
+                        memiliki sistem hierarchy yang besar. Smell ini dapat menyebabkan code sulit untuk dipelihara
+                        dan
+                        rentan terhadap kesalahan. Parallel Inheritance Hierarchy dapat ditangani dengan menerapkan move
+                        method dan move field.
+                    </p>
+                </div>
+
+                <div class="gambar-parallel-inheritance-hierarchy">
+                    <div>
+                        <p>Before</p>
+                        <img src="image/parallel1.png">
+                    </div>
+
+                    <div>
+                        <p>After</p>
+                        <img src="image/parallel2.png">
+                    </div>
+                </div>
+
+                <div class="penjelasan-gambar">
+                    <p>
+                        Pada contoh code di atas, sebelumnya terdapat class Cylinder yang extends dari class Shape,
+                        serta class CylinderVolume yang implements dari interface Volume. Code ini bertujuan untuk
+                        menghitung volume dari sebuah bangun ruang yang berbasis lingkaran, tetapi jika programmer
+                        ingin menambahkan bangun ruang lain, ia harus menambahkan paling sedikit dua subclass untuk
+                        dua parent yang berbeda. Misalnya diinginkan untuk code dapat menghitung volume kerucut (Cone),
+                        maka programmer harus menambahkan subclass Cone yang extends class Shape dan ConeVolume yang
+                        implements interface Volume.<br><br>
+                        Setelah dilakukannya refactoring, yaitu dengan implements class Shape kepada interface Volume,
+                        kemudian class Cylinder dapat extends dari class Shape, hal ini memungkinkan untuk method
+                        volume()
+                        berada di class Cylinder. Sehingga jika ingin menghitung bangun ruang lain, hanya perlu untuk
+                        menambahkan class yang extends dari class Shape.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <h1>About Us</h1>
+        <div class="about-us">
+            <div class="references">
+                <h4>References</h4>
+                <a href="https://refactoring.guru/refactoring/smells" target="_blank">Refactoring Guru</a>
+                <a href="https://sourcemaking.com/refactoring/smells" target="_blank">Source Making</a>
+            </div>
+
+            <div class="sosial-media">
+                <div class="chr">
+                    <p>Christoper Chendra</p>
+                    <div class="logo">
+                        <a href="https://www.linkedin.com/in/christoper-chendra/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/ChristoperChend" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+    
+                <div class="oren">
+                    <p>Dwi Jingga Khaerakinanti</p>
+                    <div class="logo">
+                        <a href="https://www.linkedin.com/in/dwi-jingga-khaerakinanti/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/jinggakinanti" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <span>&copy;2024 Christoper Chendra & Dwi Jingga Khaerakinanti</span>
+        </div>
+        
+    </footer>
+</body>
+
+</html>
